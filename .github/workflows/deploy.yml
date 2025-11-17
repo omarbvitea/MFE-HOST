@@ -28,6 +28,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
+          VITE_MFE1_URL: ${{ secrets.VITE_MFE1_URL }}
+          VITE_MFE2_URL: ${{ secrets.VITE_MFE2_URL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
